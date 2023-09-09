@@ -1,20 +1,13 @@
-    
-    public static void main(String[] args) {
-        AdvancedTime time = new AdvancedTime(3600); // Initialize with 1 hour (3600 seconds)
-        time.displayTime12(); // Display in 12-hour format
-        time.displayTime24(); // Display in 24-hour format
+public static void main(String[] args) {
+        AdvancedTime time1 = new AdvancedTime(); // Midnight
+        time1.displayTime12();
+        time1.displayTime24();
 
-        time.second(); // Advance by 1 second
-        time.displayTime12();
-        time.displayTime24();
+        AdvancedTime time2 = new AdvancedTime(3600); //  1 hour 
+        time2.displayTime12();
+        time2.displayTime24();
 
-        time.tickByMinute(); // Advance by 1 minute
-        time.displayTime12();
-        time.displayTime24();
-
-        time.tickByHour(); 
-        time.displayTime12();
-        time.displayTime24();
-
-        System.out.println("Time in 12-hour format: " + time.toString());
+        AdvancedTime time3 = new AdvancedTime(3, 30, "PM"); //  3:30 PM
+        time3.displayTime12();
+        time3.displayTime24();
 }
